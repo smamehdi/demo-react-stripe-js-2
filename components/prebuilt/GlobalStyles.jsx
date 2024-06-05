@@ -1,4 +1,4 @@
-import { Global, css } from "@emotion/core";
+import { Global, css } from "@emotion/react";
 
 const GlobalStyles = () => (
   <>
@@ -27,7 +27,7 @@ const GlobalStyles = () => (
       styles={css`
         body,
         html {
-          background-color: #6772e5;
+          background-color: #6772c5;
           font-size: 18px;
           font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
           padding-top: 40px;

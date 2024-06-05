@@ -4,7 +4,9 @@ import Image from "./Image";
 import DonutQuantity from "./DonutQuantity";
 
 const Shop = styled.div`
-  padding: 10px 20px 40px 20px;
+  padding: 0px 20px 40px 20px;
+  margin-top: -30px;
+  border-radius: 30px;
 `;
 
 const ShopName = styled.h1`
@@ -14,26 +16,23 @@ const ShopName = styled.h1`
   font-variant: normal;
   font-weight: 400;
   line-height: 26.4px;
-  margin-bottom: 20px;
 `;
 
 const Controls = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
 `;
 
-const DonutShop = ({ onAddDonut, onRemoveDonut, numDonuts }) => {
+
+const DonutShop = ({ donuts, onSelect }) => {
   return (
     <Shop>
-      <ShopName>/stripe/donut</ShopName>
-      <Image src="./donut.png" width="100px"></Image>
+      <Image src="./donut.png" width="200" marginTop='-50px'/>
       <Controls>
         <DonutQuantity
-          onAdd={onAddDonut}
-          onRemove={onRemoveDonut}
-          quantity={numDonuts}
+          onSelect={onSelect}
+          donuts={donuts}
         />
       </Controls>
     </Shop>
